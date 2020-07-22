@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
-  <display-name>sw_jsp</display-name>
+  <display-name>ex</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -9,4 +9,40 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+
+<!-- context 사용하여 초기화 파라미터 가지고 오기>
+<context-param>
+	<param-name>id</param-name>
+	<param-value>abc</param-value>
+</context-param>
+<context-param>
+	<param-name>pw</param-name>
+	<param-value>12235898</param-value>
+</context-param>
+<-->
+<!-- web파일을 직접 수정하여  초기화 파라미터 직접 입력
+ <servlet>
+	<servlet-name>InitParam</servlet-name>
+	<servlet-class>jsp08.InitParam</servlet-class>
+ 
+ <init-param>
+ 	<param-name>id</param-name>
+    <param-value>abcde</param-value>
+ </init-param>
+ <init-param>
+	<param-name>pw</param-name>
+	<param-value>12345</param-value>
+ </init-param>
+
+</servlet>
+ <servlet-mapping>
+	<servlet-name>InitParam</servlet-name>
+	<url-pattern>/IP</url-pattern>
+ </servlet-mapping>
+ <-->
+
+ <listener>
+ 	<listener-class>jsp08.ServletL</listener-class>
+ </listener>
+
 </web-app>
