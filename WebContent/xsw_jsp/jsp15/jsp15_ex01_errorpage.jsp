@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+    <%@ page isErrorPage="true" %>
+    <% response.setStatus(200); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,13 +9,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+	에러 발생 <br/>
+	<%= exception.getMessage() %>
 
-	<%
-		session.setAttribute("mySessionName", "mySessionData"); //(세션 이름, 세션 데이터값)
-		session.setAttribute("myNum", 12345);
-	%>
-	
-		<a href="jsp14_ex01_sessionget.jsp">sessionget</a>
 
 </body>
 </html>
